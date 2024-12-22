@@ -77,11 +77,10 @@ class BinaryCrossEntropyModel:
         test_filter = np.where(np.isin(test_labels, digits))
 
         self.train_images = train_images[train_filter].reshape((-1, 28 * 28)).astype('float32') / 255
-        print("train images shape", self.train_images.shape)
         self.test_images = test_images[test_filter].reshape((-1, 28 * 28)).astype('float32') / 255
-        print("test images shape", self.test_images.shape)
         self.train_labels = train_labels[train_filter].astype('float32')
         self.test_labels = test_labels[test_filter].astype('float32')
+
 
     def build_model(self, input_shape):
         self.network = Sequential()
@@ -90,7 +89,7 @@ class BinaryCrossEntropyModel:
         self.network.add(Dense(1, activation='sigmoid'))
         self.network.compile(optimizer='rmsprop', loss=self.binary_cross_entropy, metrics=['accuracy'])
 
-    def train_and_evaluate(self, epochs=10, batch_size=200):
+    def train_and_evaluate(self, epochs=10, batch_size=512):
         # Initialize Weights & Biases
         wandb.init(project="mnist-training", name="binary-cross-entropy-experiment", config={
             "epochs": epochs,
