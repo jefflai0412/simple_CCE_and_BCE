@@ -77,7 +77,9 @@ class BinaryCrossEntropyModel:
         test_filter = np.where(np.isin(test_labels, digits))
 
         self.train_images = train_images[train_filter].reshape((-1, 28 * 28)).astype('float32') / 255
+        print("train images shape", self.train_images.shape)
         self.test_images = test_images[test_filter].reshape((-1, 28 * 28)).astype('float32') / 255
+        print("test images shape", self.test_images.shape)
         self.train_labels = train_labels[train_filter].astype('float32')
         self.test_labels = test_labels[test_filter].astype('float32')
 
