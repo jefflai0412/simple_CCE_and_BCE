@@ -1,0 +1,16 @@
+{"time":"2024-12-22T22:50:48.2609544+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-22T22:50:48.2609544+08:00","level":"INFO","msg":"created symlink","path":"C:\\Dropbox\\Jeff Lai\\NTUT\\subjects\\113-1\\人工智慧\\作業二\\wandb\\run-20241222_225048-0dmzagk9\\logs\\debug-core.log"}
+{"time":"2024-12-22T22:50:49.4886747+08:00","level":"INFO","msg":"created new stream","id":"0dmzagk9"}
+{"time":"2024-12-22T22:50:49.4886747+08:00","level":"INFO","msg":"stream: started","id":"0dmzagk9"}
+{"time":"2024-12-22T22:50:49.4886747+08:00","level":"INFO","msg":"handler: started","stream_id":"0dmzagk9"}
+{"time":"2024-12-22T22:50:49.4886747+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"0dmzagk9"}
+{"time":"2024-12-22T22:50:49.4886747+08:00","level":"INFO","msg":"sender: started","stream_id":"0dmzagk9"}
+{"time":"2024-12-22T22:50:49.9197952+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-22T22:50:56.5803252+08:00","level":"INFO","msg":"stream: closing","id":"0dmzagk9"}
+{"time":"2024-12-22T22:50:56.5803252+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-22T22:50:56.5808538+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-22T22:50:58.3459047+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-22T22:50:58.8794022+08:00","level":"INFO","msg":"handler: closed","stream_id":"0dmzagk9"}
+{"time":"2024-12-22T22:50:58.8794022+08:00","level":"INFO","msg":"sender: closed","stream_id":"0dmzagk9"}
+{"time":"2024-12-22T22:50:58.8794022+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"0dmzagk9"}
+{"time":"2024-12-22T22:50:58.8799683+08:00","level":"INFO","msg":"stream: closed","id":"0dmzagk9"}

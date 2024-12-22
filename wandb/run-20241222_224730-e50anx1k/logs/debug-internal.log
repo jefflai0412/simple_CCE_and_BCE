@@ -1,0 +1,16 @@
+{"time":"2024-12-22T22:47:30.2052761+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-22T22:47:30.2052761+08:00","level":"INFO","msg":"created symlink","path":"C:\\Dropbox\\Jeff Lai\\NTUT\\subjects\\113-1\\人工智慧\\作業二\\wandb\\run-20241222_224730-e50anx1k\\logs\\debug-core.log"}
+{"time":"2024-12-22T22:47:31.4345353+08:00","level":"INFO","msg":"created new stream","id":"e50anx1k"}
+{"time":"2024-12-22T22:47:31.4345353+08:00","level":"INFO","msg":"stream: started","id":"e50anx1k"}
+{"time":"2024-12-22T22:47:31.4345353+08:00","level":"INFO","msg":"handler: started","stream_id":"e50anx1k"}
+{"time":"2024-12-22T22:47:31.4345353+08:00","level":"INFO","msg":"sender: started","stream_id":"e50anx1k"}
+{"time":"2024-12-22T22:47:31.4355233+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"e50anx1k"}
+{"time":"2024-12-22T22:47:31.8701536+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-22T22:47:34.8852979+08:00","level":"INFO","msg":"stream: closing","id":"e50anx1k"}
+{"time":"2024-12-22T22:47:34.8852979+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-22T22:47:34.8858176+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-22T22:47:36.0566114+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-22T22:47:36.4199364+08:00","level":"INFO","msg":"handler: closed","stream_id":"e50anx1k"}
+{"time":"2024-12-22T22:47:36.4199364+08:00","level":"INFO","msg":"sender: closed","stream_id":"e50anx1k"}
+{"time":"2024-12-22T22:47:36.4199364+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"e50anx1k"}
+{"time":"2024-12-22T22:47:36.5900125+08:00","level":"INFO","msg":"stream: closed","id":"e50anx1k"}

@@ -1,0 +1,16 @@
+{"time":"2024-12-22T22:45:01.5941642+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-22T22:45:01.594689+08:00","level":"INFO","msg":"created symlink","path":"C:\\Dropbox\\Jeff Lai\\NTUT\\subjects\\113-1\\人工智慧\\作業二\\wandb\\run-20241222_224501-003ybgya\\logs\\debug-core.log"}
+{"time":"2024-12-22T22:45:02.8674133+08:00","level":"INFO","msg":"created new stream","id":"003ybgya"}
+{"time":"2024-12-22T22:45:02.8679387+08:00","level":"INFO","msg":"stream: started","id":"003ybgya"}
+{"time":"2024-12-22T22:45:02.8679387+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"003ybgya"}
+{"time":"2024-12-22T22:45:02.8679387+08:00","level":"INFO","msg":"sender: started","stream_id":"003ybgya"}
+{"time":"2024-12-22T22:45:02.8679387+08:00","level":"INFO","msg":"handler: started","stream_id":"003ybgya"}
+{"time":"2024-12-22T22:45:03.2928745+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-22T22:45:07.1233703+08:00","level":"INFO","msg":"stream: closing","id":"003ybgya"}
+{"time":"2024-12-22T22:45:07.1233703+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-22T22:45:07.1240384+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-22T22:45:08.0617443+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-22T22:45:08.4924401+08:00","level":"INFO","msg":"handler: closed","stream_id":"003ybgya"}
+{"time":"2024-12-22T22:45:08.4924401+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"003ybgya"}
+{"time":"2024-12-22T22:45:08.4924401+08:00","level":"INFO","msg":"sender: closed","stream_id":"003ybgya"}
+{"time":"2024-12-22T22:45:08.4930403+08:00","level":"INFO","msg":"stream: closed","id":"003ybgya"}

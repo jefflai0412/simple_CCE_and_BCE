@@ -4,6 +4,8 @@ from tensorflow.keras.datasets import mnist
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.layers import Dropout
+from tensorflow.keras.regularizers import l2
 import wandb
 from wandb.integration.keras import WandbCallback
 
@@ -81,11 +83,12 @@ class BinaryCrossEntropyModel:
 
     def build_model(self, input_shape):
         self.network = Sequential()
-        self.network.add(Dense(512, activation='relu', input_shape=(input_shape,)))
+        self.network.add(Dense(512, activation='relu', input_shape=(input_shape,), kernel_regularizer=l2(0.01)))
+        self.network.add(Dropout(0.2))  # Dropout layer with 50% dropout rate
         self.network.add(Dense(1, activation='sigmoid'))
         self.network.compile(optimizer='rmsprop', loss=self.binary_cross_entropy, metrics=['accuracy'])
 
-    def train_and_evaluate(self, epochs=5, batch_size=200):
+    def train_and_evaluate(self, epochs=10, batch_size=200):
         # Initialize Weights & Biases
         wandb.init(project="mnist-training", name="binary-cross-entropy-experiment", config={
             "epochs": epochs,

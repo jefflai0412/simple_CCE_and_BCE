@@ -1,0 +1,13 @@
+[34m[1mwandb[0m: [33mWARNING[0m WandbCallback is deprecated and will be removed in a future release. Please use the WandbMetricsLogger, WandbModelCheckpoint, and WandbEvalCallback callbacks instead. See https://docs.wandb.ai/guides/integrations/keras for more information.
+Epoch 1/5
+[1m59/59[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 9ms/step - accuracy: 0.4825 - loss: 1.3794 - val_accuracy: 0.4980 - val_loss: 0.0621
+Epoch 2/5
+[1m59/59[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - accuracy: 0.5044 - loss: 0.0811 - val_accuracy: 0.4995 - val_loss: 0.0353
+Epoch 3/5
+[1m59/59[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - accuracy: 0.4956 - loss: 0.0622 - val_accuracy: 0.4990 - val_loss: 0.0251
+Epoch 4/5
+[1m59/59[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - accuracy: 0.5046 - loss: 0.0559 - val_accuracy: 0.4975 - val_loss: 0.0366
+Epoch 5/5
+[1m59/59[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - accuracy: 0.4965 - loss: 0.0467 - val_accuracy: 0.4985 - val_loss: 0.0271
+[1m62/62[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 2ms/step - accuracy: 0.4686 - loss: 0.0316 
+Binary Test Accuracy: 0.4984709620475769
