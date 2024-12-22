@@ -1,0 +1,17 @@
+[34m[1mwandb[0m: [33mWARNING[0m WandbCallback is deprecated and will be removed in a future release. Please use the WandbMetricsLogger, WandbModelCheckpoint, and WandbEvalCallback callbacks instead. See https://docs.wandb.ai/guides/integrations/keras for more information.
+[34m[1mwandb[0m: [33mWARNING[0m The save_model argument by default saves the model in the HDF5 format that cannot save custom objects like subclassed models and custom layers. This behavior will be deprecated in a future release in favor of the SavedModel format. Meanwhile, the HDF5 model is saved as W&B files and the SavedModel as W&B Artifacts.
+Epoch 1/5
+[1m146/150[0m [32m━━━━━━━━━━━━━━━━━━━[0m[37m━[0m [1m0s[0m 7ms/step - accuracy: 0.7768 - loss: 4.5943
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Traceback (most recent call last):
+  File "C:\Dropbox\Jeff Lai\NTUT\subjects\113-1\人工智慧\作業二\NN_mnist.py", line 114, in <module>
+    cat_model.train_and_evaluate()
+  File "C:\Dropbox\Jeff Lai\NTUT\subjects\113-1\人工智慧\作業二\NN_mnist.py", line 44, in train_and_evaluate
+    self.network.fit(
+  File "C:\Dropbox\Jeff Lai\NTUT\subjects\113-1\人工智慧\作業二\env\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Dropbox\Jeff Lai\NTUT\subjects\113-1\人工智慧\作業二\env\lib\site-packages\wandb\integration\keras\keras.py", line 642, in on_epoch_end
+    self._save_model_as_artifact(epoch)
+  File "C:\Dropbox\Jeff Lai\NTUT\subjects\113-1\人工智慧\作業二\env\lib\site-packages\wandb\integration\keras\keras.py", line 1032, in _save_model_as_artifact
+    self.model.save(self.filepath[:-3], overwrite=True, save_format="tf")
+ValueError: The `save_format` argument is deprecated in Keras 3. Please remove this argument and pass a file path with either `.keras` or `.h5` extension.Received: save_format=tf

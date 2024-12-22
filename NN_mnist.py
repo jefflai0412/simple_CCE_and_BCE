@@ -1,13 +1,12 @@
 import numpy as np
-import cv2
 import tensorflow.keras.backend as K
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.utils import to_categorical
+import wandb
+from wandb.integration.keras import WandbCallback
 
-
-# Categorical Cross-Entropy Class
 class CategoricalCrossEntropyModel:
     def __init__(self):
         self.network = None
@@ -35,16 +34,26 @@ class CategoricalCrossEntropyModel:
         self.network.compile(optimizer='rmsprop', loss=self.categorical_cross_entropy, metrics=['accuracy'])
 
     def train_and_evaluate(self, epochs=5, batch_size=400):
-        self.network.fit(self.train_images, self.train_labels, epochs=epochs, batch_size=batch_size)
+        # Initialize Weights & Biases
+        wandb.init(project="mnist-training", name="cross-entropy-experiment", config={
+            "epochs": epochs,
+            "batch_size": batch_size,
+            "optimizer": "rmsprop"
+        })
+
+        self.network.fit(
+            self.train_images,
+            self.train_labels,
+            epochs=epochs,
+            batch_size=batch_size,
+            validation_data=(self.test_images, self.test_labels),
+            callbacks=[WandbCallback(save_graph=False, save_model=False)]  # Disable model saving
+        )
+
+        # Evaluate the model
         test_loss, test_acc = self.network.evaluate(self.test_images, self.test_labels)
         print("Categorical Test Accuracy:", test_acc)
 
-    def predict(self, image):
-        image = image.reshape((1, 28 * 28)).astype('float32') / 255
-        prediction = self.network.predict(image)
-        return np.argmax(prediction)
-
-# Binary Cross-Entropy Class
 class BinaryCrossEntropyModel:
     def __init__(self):
         self.network = None
@@ -76,32 +85,37 @@ class BinaryCrossEntropyModel:
         self.network.add(Dense(1, activation='sigmoid'))
         self.network.compile(optimizer='rmsprop', loss=self.binary_cross_entropy, metrics=['accuracy'])
 
-    def train_and_evaluate(self, epochs=5, batch_size=100):
-        self.network.fit(self.train_images, self.train_labels, epochs=epochs, batch_size=batch_size)
+    def train_and_evaluate(self, epochs=5, batch_size=200):
+        # Initialize Weights & Biases
+        wandb.init(project="mnist-training", name="binary-cross-entropy-experiment", config={
+            "epochs": epochs,
+            "batch_size": batch_size,
+            "optimizer": "rmsprop",
+            "digits": self.digits
+        })
+
+        self.network.fit(
+            self.train_images,
+            self.train_labels,
+            epochs=epochs,
+            batch_size=batch_size,
+            validation_data=(self.test_images, self.test_labels),
+            callbacks=[WandbCallback(save_graph=False, save_model=False)]  # Disable model saving
+        )
+        
+
+        # Evaluate the model
         test_loss, test_acc = self.network.evaluate(self.test_images, self.test_labels)
         print("Binary Test Accuracy:", test_acc)
 
-    def predict(self, image):
-        image = image.reshape((1, 28 * 28)).astype('float32') / 255
-        prediction = self.network.predict(image)
-        return self.digits[0] if prediction > 0.5 else self.digits[1]
-
 # Train and evaluate categorical cross-entropy model
-cat_model = CategoricalCrossEntropyModel()
-cat_model.load_data()
-cat_model.build_model(input_shape=28 * 28, num_classes=10)
-cat_model.train_and_evaluate()
+# cat_model = CategoricalCrossEntropyModel()
+# cat_model.load_data()
+# cat_model.build_model(input_shape=28 * 28, num_classes=10)
+# cat_model.train_and_evaluate()
 
 # Train and evaluate binary cross-entropy model
 bin_model = BinaryCrossEntropyModel()
 bin_model.load_data(digits=[0, 4])
 bin_model.build_model(input_shape=28 * 28)
 bin_model.train_and_evaluate()
-
-# Example of predicting using an image
-example_image = cv2.imread("img/4.png", cv2.IMREAD_GRAYSCALE)
-example_image = cv2.resize(example_image, (28, 28))
-
-print("Categorical Model Prediction:", cat_model.predict(example_image))
-
-print("Binary Model Prediction:", bin_model.predict(example_image))

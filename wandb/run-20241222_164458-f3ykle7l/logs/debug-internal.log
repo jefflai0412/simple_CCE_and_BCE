@@ -1,0 +1,16 @@
+{"time":"2024-12-22T16:44:58.5272758+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-22T16:44:58.5272758+08:00","level":"INFO","msg":"created symlink","path":"C:\\Dropbox\\Jeff Lai\\NTUT\\subjects\\113-1\\人工智慧\\作業二\\wandb\\run-20241222_164458-f3ykle7l\\logs\\debug-core.log"}
+{"time":"2024-12-22T16:44:59.7675928+08:00","level":"INFO","msg":"created new stream","id":"f3ykle7l"}
+{"time":"2024-12-22T16:44:59.7675928+08:00","level":"INFO","msg":"stream: started","id":"f3ykle7l"}
+{"time":"2024-12-22T16:44:59.7675928+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"f3ykle7l"}
+{"time":"2024-12-22T16:44:59.7675928+08:00","level":"INFO","msg":"sender: started","stream_id":"f3ykle7l"}
+{"time":"2024-12-22T16:44:59.7675928+08:00","level":"INFO","msg":"handler: started","stream_id":"f3ykle7l"}
+{"time":"2024-12-22T16:45:00.1404111+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-22T16:45:03.1619875+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-22T16:45:03.1619875+08:00","level":"INFO","msg":"stream: closing","id":"f3ykle7l"}
+{"time":"2024-12-22T16:45:03.1625684+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-22T16:45:04.0324186+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-22T16:45:04.3162857+08:00","level":"INFO","msg":"handler: closed","stream_id":"f3ykle7l"}
+{"time":"2024-12-22T16:45:04.3162857+08:00","level":"INFO","msg":"sender: closed","stream_id":"f3ykle7l"}
+{"time":"2024-12-22T16:45:04.3162857+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"f3ykle7l"}
+{"time":"2024-12-22T16:45:04.3168112+08:00","level":"INFO","msg":"stream: closed","id":"f3ykle7l"}
